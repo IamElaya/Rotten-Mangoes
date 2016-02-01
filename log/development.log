@@ -194,3 +194,67 @@ Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2016-02-01 23:04:53 +0000
 
 
 Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2016-02-01 23:04:53 +0000
+
+
+Started GET "/movies" for 10.0.2.2 at 2016-02-01 23:16:07 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (1.6ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 336ms (Views: 294.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2016-02-01 23:16:08 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2016-02-01 23:16:08 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 10.0.2.2 at 2016-02-01 23:16:08 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 10.0.2.2 at 2016-02-01 23:16:08 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2016-02-01 23:16:08 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2016-02-01 23:16:08 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2016-02-01 23:16:08 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2016-02-01 23:16:09 +0000
+
+
+Started GET "/movies/new" for 10.0.2.2 at 2016-02-01 23:16:10 +0000
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (72.3ms)
+  Rendered movies/new.html.erb within layouts/application (98.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 209ms (Views: 205.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/sessions/new" for 10.0.2.2 at 2016-02-01 23:16:13 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 117ms (Views: 115.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 10.0.2.2 at 2016-02-01 23:16:15 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (24.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 149ms (Views: 125.6ms | ActiveRecord: 1.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateReviews (20160201232016)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "movie_id" integer, "text" text, "rating_out_of_ten" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_reviews_on_user_id" ON "reviews" ("user_id")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_reviews_on_movie_id" ON "reviews" ("movie_id")[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160201232016"]]
+  [1m[36m (10.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
