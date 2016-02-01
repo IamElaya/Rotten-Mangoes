@@ -514,3 +514,195 @@ Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2016-02-01 23:30:42 +0000
 
 
 Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2016-02-01 23:30:42 +0000
+
+
+Started GET "/movies" for 10.0.2.2 at 2016-02-01 23:42:41 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.9ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 306ms (Views: 260.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2016-02-01 23:42:42 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2016-02-01 23:42:42 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 10.0.2.2 at 2016-02-01 23:42:42 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2016-02-01 23:42:42 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2016-02-01 23:42:42 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 10.0.2.2 at 2016-02-01 23:42:42 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2016-02-01 23:42:42 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2016-02-01 23:42:42 +0000
+
+
+Started GET "/users/new" for 10.0.2.2 at 2016-02-01 23:42:46 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (43.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 187ms (Views: 147.6ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2016-02-01 23:42:52 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HfS7a7C9vPHvmcuVEG4aHHBr47gEqfifdd53Zhle+/k=", "user"=>{"email"=>"asison13@gmail.com", "firstname"=>"Elaya", "lastname"=>"Sison", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (13.6ms)[0m  INSERT INTO "users" ("created_at", "email", "firstname", "lastname", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 01 Feb 2016 23:42:52 UTC +00:00], ["email", "asison13@gmail.com"], ["firstname", "Elaya"], ["lastname", "Sison"], ["password_digest", "$2a$10$T2FfD98alouzcuINoNqp5e8XzBK24d8K/gN4NrA5zW/CaLygGnoXO"], ["updated_at", Mon, 01 Feb 2016 23:42:52 UTC +00:00]]
+  [1m[36m (9.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 110ms (ActiveRecord: 22.9ms)
+
+
+Started GET "/movies" for 10.0.2.2 at 2016-02-01 23:42:52 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (1.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 98ms (Views: 96.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2016-02-01 23:42:53 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2016-02-01 23:42:53 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 10.0.2.2 at 2016-02-01 23:42:53 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2016-02-01 23:42:53 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2016-02-01 23:42:53 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 10.0.2.2 at 2016-02-01 23:42:53 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2016-02-01 23:42:53 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2016-02-01 23:42:53 +0000
+
+
+Started GET "/movies/new" for 10.0.2.2 at 2016-02-01 23:42:59 +0000
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (37.3ms)
+  Rendered movies/new.html.erb within layouts/application (58.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 159ms (Views: 157.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/movies" for 10.0.2.2 at 2016-02-01 23:43:17 +0000
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HfS7a7C9vPHvmcuVEG4aHHBr47gEqfifdd53Zhle+/k=", "movie"=>{"title"=>"xD", "release_date"=>"2016-02-03", "director"=>"xD", "runtime_in_minutes"=>"123", "poster_image_url"=>"xD", "description"=>"XD"}, "commit"=>"Submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 4ms
+
+NameError (undefined local variable or method `erros' for #<Movie:0x9beeef8>):
+  app/models/movie.rb:29:in `release_date_is_in_the_past'
+  app/controllers/movies_controller.rb:22:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.4ms)
+
+
+Started GET "/movies" for 10.0.2.2 at 2016-02-01 23:43:21 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 102ms (Views: 100.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/movies" for 10.0.2.2 at 2016-02-01 23:43:28 +0000
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HfS7a7C9vPHvmcuVEG4aHHBr47gEqfifdd53Zhle+/k=", "movie"=>{"title"=>"xD", "release_date"=>"2016-01-21", "director"=>"xD", "runtime_in_minutes"=>"123", "poster_image_url"=>"xD", "description"=>"XD"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.7ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "poster_image_url", "release_date", "runtime_in_minutes", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 01 Feb 2016 23:43:28 UTC +00:00], ["description", "XD"], ["director", "xD"], ["poster_image_url", "xD"], ["release_date", Thu, 21 Jan 2016 00:00:00 UTC +00:00], ["runtime_in_minutes", 123], ["title", "xD"], ["updated_at", Mon, 01 Feb 2016 23:43:28 UTC +00:00]]
+  [1m[35m (10.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 21ms (ActiveRecord: 13.8ms)
+
+
+Started GET "/movies" for 10.0.2.2 at 2016-02-01 23:43:28 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.5ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (27.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 127ms (Views: 124.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2016-02-01 23:43:28 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 10.0.2.2 at 2016-02-01 23:43:28 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2016-02-01 23:43:28 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 10.0.2.2 at 2016-02-01 23:43:28 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2016-02-01 23:43:28 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2016-02-01 23:43:28 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2016-02-01 23:43:28 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2016-02-01 23:43:28 +0000
+
+
+Started GET "/images/xD" for 10.0.2.2 at 2016-02-01 23:43:28 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/xD"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.8ms)
