@@ -1,0 +1,27 @@
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (4.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMovies (20131117174426)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "director" varchar(255), "runtime_in_minutes" integer, "description" text, "poster_image_url" varchar(255), "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131117174426"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUsers (20131117200213)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131117200213"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddFirstnameAndLastnameToUsers (20131117200831)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (3.5ms)[0m  [1mALTER TABLE "users" ADD "firstname" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "lastname" varchar(255)
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20131117200831"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+Migrating to CreateReviews (20131117211410)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "movie_id" integer, "text" text, "rating_out_of_ten" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_reviews_on_user_id" ON "reviews" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_reviews_on_movie_id" ON "reviews" ("movie_id")
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20131117211410"]]
+  [1m[35m (3.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
