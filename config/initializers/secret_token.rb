@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-RottenMangoes::Application.config.secret_key_base = 'a6a82bc0cc9892f41ae4e5e3b512a581300ff08bd4093951ea6644e77dc4a18137c37fac0353f30920b7728dc1995d76e709f713e43009405d7e109578edeed9'
+RottenMangoes::Application.config.secret_key_base = '509cb6c6d620fd137c3fae0d426feff4416dbb50fc6bd8f535b10642763a08f00e803c5ec9f13e4dad096533f9c6205caa2e96294f625bc22ab265db974dfcd4'
