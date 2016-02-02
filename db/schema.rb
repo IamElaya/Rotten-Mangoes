@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20160201232016) do
     t.integer  "runtime_in_minutes"
     t.text     "description"
     t.string   "poster_image_url"
+    t.string   "poster"
     t.datetime "release_date"
     t.datetime "created_at"
     t.datetime "updated_at"
