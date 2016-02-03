@@ -1,7 +1,7 @@
-   <% if current_user %>
-      <% @users.each do |user| %>
-        <p><%= user.inspect %></p>
-      <% end %>
-    <% else %>
-      <p>Please <%= link_to "log in", new_session_path %> to see reviews and add your own.</p> 
-    <% end %>
+
+    
+    <h2>(<%= link_to "edit", edit_admin_user_path(@user) %>, <%= link_to "delete", admin_user_path(@user), method: :delete, confirm: "You sure?" %>)</h2>
+    <h3><%= @user.firstname %> | <%= @user.lastname %></h3>
+    <h4> <%= @user.email %></h4>
+
+     <hr>

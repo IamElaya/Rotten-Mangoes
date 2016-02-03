@@ -27,6 +27,13 @@ class Movie < ActiveRecord::Base
 
   validate :release_date_is_in_the_past
 
+
+
+  def self.search(search)
+    where("title LIKE ?", "%#{search}%") 
+    where("director LIKE ?", "%#{search}%")
+  end
+
   def review_average
     reviews.sum(:rating_out_of_ten)/reviews.size
   end

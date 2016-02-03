@@ -11,7 +11,7 @@ before_action :require_admin
   end
 
   def index
-    @users = User.order(:firstname).page params[:page]
+    @users = User.order(:lastname).page params[:page]
   end
 
   def new
@@ -31,6 +31,16 @@ before_action :require_admin
   def show
     @user = User.find(params[:id])
   end
+  
+  def show
+    @user = User.find(params[:id])
+  end
+
+  def destroy
+        @user = User.find(params[:id])
+        @user.destroy
+        redirect_to admin_user_path
+      end
 
   protected
 
