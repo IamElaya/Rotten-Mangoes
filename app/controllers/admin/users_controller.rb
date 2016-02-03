@@ -10,7 +10,11 @@ before_action :require_admin
     end
   end
 
-   def new
+  def index
+    @users = User.order(:firstname).page params[:page]
+  end
+
+  def new
     @user = User.new
   end
 
@@ -24,9 +28,19 @@ before_action :require_admin
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   protected
 
   def user_params
     params.require(:user).permit(:email, :firstname, :lastname, :password, :password_confirmation)
   end
+
+  def paginate
+
+  end
+
+  helper_method :paginate
 end
