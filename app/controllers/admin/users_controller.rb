@@ -28,19 +28,35 @@ before_action :require_admin
     end
   end
 
-  def show
-    @user = User.find(params[:id])
+  def update
+        @user = User.find(params[:id])
+
+        if @user.update_attributes(user_params)
+          redirect_to admin_user_path(@user)
+        else
+          render :edit
+        end
   end
-  
+
+  def edit
+    if params[:admin]
+      @user = User.find(params[:id])
+      @user.admin = params[:admin]
+    else
+      @user = User.find(params[:id])
+    end
+  end
+
   def show
     @user = User.find(params[:id])
   end
 
   def destroy
         @user = User.find(params[:id])
+        UserMailer.welcome_email(@user).deliver
         @user.destroy
-        redirect_to admin_user_path
-      end
+          redirect_to admin_user_path
+    end
 
   protected
 
