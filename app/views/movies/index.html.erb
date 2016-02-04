@@ -6,7 +6,7 @@
     <p><%= text_field_tag :title %></p>
      <p><%= text_field_tag :director %></p>
       <p><%= select_tag :runtime_in_minutes, options_for_select([['Less than 90 minutes', "Under90"], ["90 to 120 minutes", "90 to 120"], ["Over 120 minutes", "Over120"]]) %></p>
-      <%= submit_tag "Search" %>
+      <a class="btn btn-default"><%= submit_tag "Search" %></a>
     <% end %>
   
  <%= render "movie" %>

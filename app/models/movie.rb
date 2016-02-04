@@ -2,7 +2,7 @@ class Movie < ActiveRecord::Base
 
 
   scope :Under90, ->  { where("runtime_in_minutes < ?", 90) }
-  scope :Between90and120, -> { where("runtime_in_minutes < ? AND runtime_in_minutes > ?", 90, 120) } 
+  scope :Between90and120, -> { where("runtime_in_minutes > ? AND runtime_in_minutes < ?", 90, 120) } 
   scope :Over120, -> { where("runtime_in_minutes > ?", 120) } 
 
   has_many :reviews
@@ -32,12 +32,6 @@ class Movie < ActiveRecord::Base
 
   validate :release_date_is_in_the_past
 
-
-
-  def self.search(search)
-    where("title LIKE ?", "%#{search}%") 
-    where("director LIKE ?", "%#{search}%")
-  end
 
   def review_average
     reviews.sum(:rating_out_of_ten)/reviews.size
