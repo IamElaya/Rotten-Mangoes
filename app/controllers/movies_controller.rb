@@ -1,5 +1,8 @@
 class MoviesController < ApplicationController
   
+
+
+
   def index
 
     @movies = Movie.where("title LIKE ?", "%#{params[:title]}%")
@@ -8,13 +11,17 @@ class MoviesController < ApplicationController
     case params[:runtime_in_minutes]
     
     when "Under90"
-      @movies = @movies.where("runtime_in_minutes < ?", 90)
+      # @movies = @movies.where("runtime_in_minutes < ?", 90)
+      @movies = @movies.Under90
+
     
     when "90 to 120"
-      @movies = @movies.where("runtime_in_minutes < ? AND runtime_in_minutes > ?", 90, 120)
+      # @movies = @movies.where("runtime_in_minutes < ? AND runtime_in_minutes > ?", 90, 120)
+       @movies = @movies.Between90and120
     
     when "Over120"
-      @movies = @movies.where("runtime_in_minutes > ?", 120)
+      # @movies = @movies.where("runtime_in_minutes > ?", 120)
+      @movies = @movies.Over120
     else
       @movies 
   end
