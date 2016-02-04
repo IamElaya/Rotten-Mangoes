@@ -11,7 +11,7 @@ RottenMangoes::Application.routes.draw do
     resources :users
   end
   resources :users, only: [:new, :create]
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :session, only: [:new, :create, :destroy]
   root to: 'movies#index'
   # get "movies/index"
   # get "movies/show"

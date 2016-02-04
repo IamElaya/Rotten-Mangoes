@@ -28262,3 +28262,61 @@ ActiveRecord::RecordNotFound (Couldn't find User with id=14):
   Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
   Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
   Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-02-04 02:28:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (1.2ms)[0m  SELECT "movies".* FROM "movies" WHERE (title LIKE '%%') AND (director LIKE '%%')
+  Rendered movies/index.html.erb within layouts/application (32.8ms)
+  [1m[36mUser Load (6.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_footer.html.erb (53.0ms)
+Completed 200 OK in 501ms (Views: 427.3ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-02-04 02:28:23 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (2.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (title LIKE '%%') AND (director LIKE '%%')
+  Rendered movies/index.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_footer.html.erb (2.5ms)
+Completed 200 OK in 125ms (Views: 121.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2016-02-04 02:28:24 +0000
+
+
+Started GET "/assets/admin/users.css?body=1" for 10.0.2.2 at 2016-02-04 02:28:24 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 10.0.2.2 at 2016-02-04 02:28:24 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2016-02-04 02:28:24 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2016-02-04 02:28:24 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2016-02-04 02:28:24 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2016-02-04 02:28:24 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2016-02-04 02:28:24 +0000
+
+
+Started GET "/assets/admin/users.js?body=1" for 10.0.2.2 at 2016-02-04 02:28:24 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2016-02-04 02:28:24 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 10.0.2.2 at 2016-02-04 02:28:24 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2016-02-04 02:28:24 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2016-02-04 02:28:24 +0000
