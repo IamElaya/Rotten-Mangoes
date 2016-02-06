@@ -6,12 +6,14 @@
     <link rel="stylesheet" href="/stylesheets/bootstrap.css">
     <link rel="stylesheet" href="/stylesheets/animate.min.css">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+     
 
     <link rel="stylesheet" href="/stylesheets/application.css">
-    <link rel="stylesheet" href="/stylesheets/application1.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="/javascript/application.js"></script>
+    <script src="/javascript/bootstrap.js"></script>
   <title>RottenMangoes</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -19,13 +21,16 @@
 
 </head>
 <body>
-<%= render 'layouts/navbar' %>
-<div class="container">
+<div class="page-wrap">
+  <%= render 'layouts/navbar' %>
   <% flash.each do |key, value| %>
     <%= content_tag(:div, value) %>
   <% end %>
-<%= yield %>
- </div>
- <%= render 'layouts/footer' %>
+  <div class="space"></div>
+  <%= yield %>
+ 
+  </div>
+   <%= render 'layouts/footer' %>
 </body>
+ 
 </html>

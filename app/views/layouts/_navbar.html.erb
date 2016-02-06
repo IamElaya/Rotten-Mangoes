@@ -1,23 +1,43 @@
-<div class="navbar navbar-default" role="navigation">
+<div id="bar">
+<!-- <div class="container-fluid"> -->
+<nav class="navbar navbar-default navbar-fixed-top">
 <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-           <a class="navbar-brand" href="#">Rotten Mangoes</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#home">Home</a></li>
-            <small>
-        <% if current_user %>
-          Signed in as <%= current_user.full_name %> (<%= link_to "Log out", session_path("current"), method: :delete %>)
-        <% else %>
-          <%= link_to "Log In", new_session_path %> | <%= link_to "Sign Up", new_user_path %>
-        <% end %>
-      </small>
+          <ul>
+          <p class="active navbar-brand" href="#"><%= link_to "Rotten Mangoes", movies_path %></p>
           </ul>
           </div>
+               <div class="navbar-collapse collapse">
+               <div class="nav navbar-nav navbar-left">
+               <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle btn btn-info" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Search
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#"><%= render 'movies/search' %></a></li>
+  </ul>
+  </div>
+</div>
+
+          <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#popular_now">Popular Now</a></li>
+            <li class="active"><a href="#my_list">My List</a></li>
+              <li class="active"><a href="#coming_soon">Coming Soon</a></li>
+            <% if current_user %>
+            <li class="active"><a class="btn btn-primary">  Signed in as <%= current_user.full_name %> </a></li>
+            <li class="active "><%= link_to "Log out", session_path("current"), method: :delete %></a></li>
+        <% else %>
+          <li class="active"><%= link_to "Log In", new_session_path %></li>  
+          <li class="active"><%= link_to "Sign Up", new_user_path %></li> 
+        <% end %>
+          </ul>
+          </div>
+          </nav>
+     <!--       </div> -->
           </div>

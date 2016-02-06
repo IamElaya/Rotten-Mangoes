@@ -1,12 +1,37 @@
- <h1>Rotten Mangoes</h1>
-    <%= link_to "Submit a movie!", new_movie_path %>
-    <hr>
+<div class="topbar">
+<h1 id="welcome">Welcome To Rotten Mangoes</h1>
+<div class="row">
+  <div class="col-md-4">
+  <h1>Movies</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in placerat dolor. Suspendisse quis congue lacus, tempor euismod enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam ut velit non lacus blandit ullamcorper nec ac eros. Praesent vulputate sollicitudin lectus, sed pellentesque ipsum laoreet nec. Sed malesuada rhoncus tempus. Aliquam eget magna quis nulla pretium sagittis. Fusce rhoncus porta tellus, a interdum odio ullamcorper condimentum. Duis sit amet felis odio. Nam dictum nunc orci, sed dapibus arcu venenatis et.</p>
+  </div>
+  <div class="col-md-4">
+  <h1>TV Shows</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in placerat dolor. Suspendisse quis congue lacus, tempor euismod enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam ut velit non lacus blandit ullamcorper nec ac eros. Praesent vulputate sollicitudin lectus, sed pellentesque ipsum laoreet nec. Sed malesuada rhoncus tempus. Aliquam eget magna quis nulla pretium sagittis. Fusce rhoncus porta tellus, a interdum odio ullamcorper condimentum. Duis sit amet felis odio. Nam dictum nunc orci, sed dapibus arcu venenatis et.</p>
+  </div>
+  <div class="col-lg-4">
+  <h1>Anime</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in placerat dolor. Suspendisse quis congue lacus, tempor euismod enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam ut velit non lacus blandit ullamcorper nec ac eros. Praesent vulputate sollicitudin lectus, sed pellentesque ipsum laoreet nec. Sed malesuada rhoncus tempus. Aliquam eget magna quis nulla pretium sagittis. Fusce rhoncus porta tellus, a interdum odio ullamcorper condimentum. Duis sit amet felis odio. Nam dictum nunc orci, sed dapibus arcu venenatis et.</p>
+  </div>
+</div>
 
-    <%= form_tag movies_path, method: :get, class: "search_form", id: "foo" do %>
-    <p><%= text_field_tag :title %></p>
-     <p><%= text_field_tag :director %></p>
-      <p><%= select_tag :runtime_in_minutes, options_for_select([['Less than 90 minutes', "Under90"], ["90 to 120 minutes", "90 to 120"], ["Over 120 minutes", "Over120"]]) %></p>
-      <a class="btn btn-default"><%= submit_tag "Search" %></a>
-    <% end %>
-  
+</div>
+
+
+   <h1 id = "popular_now" class="popular">Popular Now</h1>
+<section class="module parallax parallax-1">
+</section>
+    <div class="container">
+   <div id="my_list" class="row">
+     <button class="btn btn-success"><%= link_to "Submit Something", new_movie_path %></button>
  <%= render "movie" %>
+    </div>
+    </div>
+     <h1 id="coming_soon" class="popular">Coming Soon</h1>
+<section class="module parallax parallax-2">
+</section>
+<div class="indexspace"></div>
+</div>
+
+
+

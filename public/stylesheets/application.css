@@ -1,2 +1,239 @@
-*= require bootstrap
+/**= require bootstrap
 require_tree .
+*/
+.navbar-default {
+  background-color: #000000;
+  border-color: #FFFFFF;
+  color: #E8B85D;
+  box-shadow: inset 0px 6px 0px #000;
+  margin-right: 10px;
+}
+
+.navbar-default .navbar-brand {
+  color: #E8B85D;
+  margin-bottom: -5px;
+  margin-left: -30px;
+
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #E8B85D;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #E8B85D;
+  background-color: #1A242F;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #18BC9C;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: #1A242F;
+  color: #E8B85D;
+}
+
+#dropdownMenu1 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#mangoes {
+  position: relative;
+  top: 10px;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin-top: 10px;
+  margin: 0px;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 6rem;
+}
+
+/*#bar {
+  margin-bottom: 200px;
+}*/
+
+.page-wrap {
+  min-height: 100%;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+.space {
+  height: 50px;
+}
+
+.topbar {
+  min-height: 300px;
+  margin-top: 50px;
+}
+
+#welcome {
+  text-align: center;
+  color: #E8B85D;
+}
+
+.col-lg-4 {
+  text-align: center;
+  color: #000000;
+}
+
+.col-md-4 p {
+  text-align: center;
+}
+
+.col-md-4 h1 {
+  text-align: center;
+}
+
+#secondbar {
+  min-height: 300px;
+}
+
+.searchbar {
+  width: 100%;
+  margin: auto;
+}
+
+.col-lg-1 {
+  display: inline-block;
+    width: 8%;
+    height: 100%;
+    min-width: 150px;
+}
+
+.row {
+  margin-top: 50px;
+}
+
+section.module.parallax {
+  height: 400px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+section.module.parallax h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 48px;
+  line-height: 500px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+section.module.parallax-1 {
+  background-image: url(/images/revenant.jpeg);
+}
+
+section.module.parallax-2  {
+  background-image: url(/images/deadpool.jpg);
+}
+
+.popular {
+  font-size: 30px;  
+  text-align: center;
+  color: #E8B85D;
+}
+
+
+#list {
+  text-align: center;
+}
+
+.moviepagepic {
+  border-radius: 30px 30px 30px 30px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.3s ease;
+/*  margin: auto;*/
+/*  padding: 0;*/
+z-index: 1;
+}
+  
+.moviepagepic:hover {
+  z-index: 2;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+#my_list {
+
+}
+
+#showpage {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.searchbar {
+  width: 100%;
+  padding: 20px;
+}
+
+.navbarcustom, .page-wrap:after {
+    clear: both;
+    margin: 0 auto;
+    background-color: #000000;
+   position: absolute;
+     right: 0;
+  bottom: 0;
+  left: 0;
+   padding: 1rem;
+}
+
+#coming_soon {
+  position: relative;
+
+}
+
+.bottom {
+  margin-bottom: 220px;
+}
+
+.bottom2 {
+  margin-bottom: 380px;
+}
+
+#footertext {
+  color: #E8B85D;
+}
+
+/*.indexspace {
+  margin-bottom: 100px;
+}*/
+
+.navbar-text i {
+  padding: 10px;
+}
