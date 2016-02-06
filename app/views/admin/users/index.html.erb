@@ -1,0 +1,5 @@
+ <%= link_to "Create a User", new_admin_user_path %>
+
+<% @users.each do |user| %>
+  <p><%= link_to user.firstname, admin_user_path(user) %> | <%= user.lastname %> | <%= user.email %></p>
+  <% end %>

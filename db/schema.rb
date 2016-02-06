@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20160201232016) do
     t.integer  "runtime_in_minutes"
     t.text     "description"
     t.string   "poster_image_url"
+    t.string   "poster"
     t.datetime "release_date"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160201232016) do
   create_table "users", force: true do |t|
     t.string   "email"
     t.string   "password_digest"
+    t.boolean  "admin",           default: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "firstname"

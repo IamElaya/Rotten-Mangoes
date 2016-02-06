@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+  
+  def index
+    @users = User.all
+  end
+
   def new
     @user = User.new
   end
@@ -11,6 +16,10 @@ class UsersController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @users = User.all
   end
 
   protected

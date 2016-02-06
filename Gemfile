@@ -7,6 +7,7 @@ gem 'rails', '4.0.0'
 gem 'sqlite3'
 
 # Use SCSS for stylesheets
+gem 'bootstrap-sass'
 gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
@@ -34,6 +35,13 @@ end
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'carrierwave'
+gem "rmagick"
+gem 'kaminari'
+
+group :development do
+  gem 'pry'
+end
 
 # Use unicorn as the app server
 # gem 'unicorn'

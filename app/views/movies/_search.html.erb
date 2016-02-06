@@ -1,0 +1,9 @@
+<div class="searchbar">
+<h1>Looking For Something?</h1>
+<%= form_tag movies_path, method: :get, class: "search_form", id: "foo" do %>
+    <p><%= text_field_tag :title, nil, placeholder: "Title" %></p>
+     <p><%= text_field_tag :director, nil, placeholder: "Director" %></p>
+      <p><%= select_tag :runtime_in_minutes, options_for_select([["Pick a Runtime"], ['Less than 90 minutes', "Under90"], ["90 to 120 minutes", "90 to 120"], ["Over 120 minutes", "Over120"]]) %></p>
+      <a class="btn btn-default"><%= submit_tag "Search" %></a>
+    <% end %>
+    </div>
