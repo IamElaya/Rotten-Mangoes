@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'bootstrap-sass'
@@ -39,10 +38,14 @@ gem 'carrierwave'
 gem "rmagick"
 gem 'kaminari'
 
-group :development do
+group :development :test do
   gem 'pry'
+  gem 'sqlite3'
 end
 
+group :production do
+  gem 'pg'
+end
 # Use unicorn as the app server
 # gem 'unicorn'
 
