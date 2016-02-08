@@ -1,3 +1,4 @@
+ruby '2.1.3'
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -32,12 +33,6 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
-gem 'carrierwave'
-gem "rmagick"
-gem 'kaminari'
-
 group :development :test do
   gem 'pry'
   gem 'sqlite3'
@@ -46,6 +41,14 @@ end
 group :production do
   gem 'pg'
 end
+
+# Use ActiveModel has_secure_password
+gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'carrierwave'
+gem "rmagick"
+gem 'kaminari'
+
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
