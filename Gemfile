@@ -29,6 +29,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'puma'
 
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -39,8 +40,9 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-group :production do
+group :production, :staging do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 # Use ActiveModel has_secure_password
