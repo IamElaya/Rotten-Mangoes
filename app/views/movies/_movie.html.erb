@@ -1,9 +1,10 @@
-   <h1 id="list">My List</h1>
-   <% @movies.each do |movie| %>
+<h1 id="list">My List</h1>
+<button id="submitbutton" class="btn btn-success"><%= link_to "Submit Something", new_movie_path %></button></br>
+<% @movies.each do |movie| %>
   <div class="col-lg-1">
-      <div class="moviepagepic"><%= link_to image_tag(movie.poster), movie_path(movie) %></div>
+    <div class="moviepagepic"><%= link_to image_tag(movie.poster), movie_path(movie) %></div>
 <!--       <h2><%= link_to movie.title, movie_path(movie) %></h2> -->
-      </div>
-    <% end %>
+    </div>
+<% end %>
    
  

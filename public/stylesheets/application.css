@@ -1,59 +1,3 @@
-/**= require bootstrap
-require_tree .
-*/
-.navbar-default {
-  background-color: #000000;
-  border-color: #FFFFFF;
-  color: #E8B85D;
-  box-shadow: inset 0px 6px 0px #000;
-  margin-right: 10px;
-}
-
-.navbar-default .navbar-brand {
-  color: #E8B85D;
-  margin-bottom: -5px;
-  margin-left: -30px;
-
-}
-
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-  background-color: transparent;
-}
-
-.navbar-default .navbar-nav > li > a {
-  color: #E8B85D;
-}
-
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #E8B85D;
-  background-color: #1A242F;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #18BC9C;
-  background-color: transparent;
-}
-
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-  background-color: #1A242F;
-  color: #E8B85D;
-}
-
-#dropdownMenu1 {
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-#mangoes {
-  position: relative;
-  top: 10px;
-}
 html {
   height: 100%;
   box-sizing: border-box;
@@ -72,6 +16,85 @@ body {
   position: relative;
   padding-bottom: 6rem;
 }
+/**= require bootstrap
+require_tree .
+*/
+.navbar-default {
+  background-color: #000000;
+  border-color: #FFFFFF;
+  color: #E8B85D;
+  box-shadow: inset 0px 6px 0px #000;
+}
+
+#mainnavbar {
+  border-color: #FFFFFF;
+}
+.navbar-default .navbar-brand {
+  color: #E8B85D;
+  margin-bottom: -5px;
+  margin-left: -30px;
+
+}
+
+.navbar-brand > a {
+  color: #E8B85D;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #E8B85D;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  color: #E8B85D;
+  background-color: #000000;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  color: #E8B85D;
+  background-color: transparent;
+  margin-right: 10px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #18BC9C;
+  background-color: #1A242F;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: #1A242F;
+  color: #18BC9C;
+}
+
+#navbarleftx {
+  width: 50%;
+}
+
+#dropdownMenu1 {
+  margin-top: 9%;
+  margin-left: 10px;
+}
+
+#mangoes {
+  position: relative;
+  top: 10px;
+}
+
+#submitbutton {
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+  color: #FFFFFF; 
+  margin-bottom: 1%;
+  margin-left: 2%;
+}
+
 
 /*#bar {
   margin-bottom: 200px;
@@ -134,7 +157,7 @@ body {
 }
 
 section.module.parallax {
-  height: 400px;
+  height: 500px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -154,11 +177,11 @@ section.module.parallax h1 {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 section.module.parallax-1 {
-  background-image: url(/images/revenant.jpeg);
+  background-image: url(/images/Zootopia.jpg);
 }
 
 section.module.parallax-2  {
-  background-image: url(/images/deadpool.jpg);
+  background-image: url(/images/Captain_America.jpg);
 }
 
 .popular {
@@ -166,7 +189,6 @@ section.module.parallax-2  {
   text-align: center;
   color: #E8B85D;
 }
-
 
 #list {
   text-align: center;

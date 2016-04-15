@@ -1,7 +1,7 @@
 class Admin::UsersController < ApplicationController
 
-before_action :require_admin
-
+  before_action :require_admin
+  helper_method :paginate
   # Methods omitted
 
   def require_admin
@@ -29,13 +29,13 @@ before_action :require_admin
   end
 
   def update
-        @user = User.find(params[:id])
+    @user = User.find(params[:id])
 
-        if @user.update_attributes(user_params)
-          redirect_to admin_user_path(@user)
-        else
-          render :edit
-        end
+    if @user.update_attributes(user_params)
+      redirect_to admin_user_path(@user)
+    else
+      render :edit
+    end
   end
 
   def edit
@@ -52,11 +52,11 @@ before_action :require_admin
   end
 
   def destroy
-        @user = User.find(params[:id])
-        UserMailer.welcome_email(@user).deliver
-        @user.destroy
-          redirect_to admin_user_path
-    end
+    @user = User.find(params[:id])
+    UserMailer.welcome_email(@user).deliver
+    @user.destroy
+    redirect_to admin_user_path
+  end
 
   protected
 
@@ -67,6 +67,5 @@ before_action :require_admin
   def paginate
 
   end
-
-  helper_method :paginate
+ 
 end

@@ -1,6 +1,5 @@
 class Movie < ActiveRecord::Base
 
-
   scope :Under90, ->  { where("runtime_in_minutes < ?", 90) }
   scope :Between90and120, -> { where("runtime_in_minutes > ? AND runtime_in_minutes < ?", 90, 120) } 
   scope :Over120, -> { where("runtime_in_minutes > ?", 120) } 
