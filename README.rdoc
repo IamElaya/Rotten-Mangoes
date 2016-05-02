@@ -1,4 +1,4 @@
-Rotten Mangoes
+# Rotten Mangoes
 Rotten Mangoes is a Netflix/Rotten Tomatoes hybrid, where one can create an account, and save their favorite movies/TV shows/anime.
 
 The project was created using Ruby on Rails, JavaScript, jQuery, HTML5, and CSS3.
